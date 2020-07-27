@@ -3,4 +3,5 @@ class Api::V1::PicturesController < ApplicationController
         @pictures = Picture.all
         render json: @pictures
     end
+    
 end
