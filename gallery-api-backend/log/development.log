@@ -928,3 +928,108 @@ Processing by Api::V1::PicturesController#index as */*
 Completed 200 OK in 19ms (Views: 6.5ms | ActiveRecord: 11.8ms | Allocations: 3343)
 
 
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 18:45:08 -0400
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (1.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 10.1ms | ActiveRecord: 6.4ms | Allocations: 7135)
+
+
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 18:46:41 -0400
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1091)
+
+
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 18:46:55 -0400
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 1091)
+
+
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 19:02:30 -0400
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 1159)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Destroy (0.5ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 3]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Destroy (0.5ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (1.2ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "mountain"], ["like", 0], ["imageUrl", "https://cosmosmagazine.com/wp-content/uploads/2020/02/190218-mount-full-1440x810.jpg"], ["created_at", "2020-07-27 23:03:15.689603"], ["updated_at", "2020-07-27 23:03:15.689603"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "oceans"], ["like", 0], ["imageUrl", "https://scx2.b-cdn.net/gfx/news/2019/bluefinancea.jpg"], ["created_at", "2020-07-27 23:03:15.695663"], ["updated_at", "2020-07-27 23:03:15.695663"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "walk in the park"], ["like", 0], ["imageUrl", "https://images-na.ssl-images-amazon.com/images/I/716tsQsStCL.jpg"], ["created_at", "2020-07-27 23:03:15.701218"], ["updated_at", "2020-07-27 23:03:15.701218"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Starry Night"], ["like", 0], ["imageUrl", "https://www.vangoghgallery.com/img/starry_night_full.jpg"], ["created_at", "2020-07-27 23:03:15.712035"], ["updated_at", "2020-07-27 23:03:15.712035"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sponge Out of Water"], ["like", 0], ["imageUrl", "https://mymodernmet.com/wp/wp-content/uploads/2019/12/dave-pollot-thrift-store-paintings-1.jpg"], ["created_at", "2020-07-27 23:03:15.728212"], ["updated_at", "2020-07-27 23:03:15.728212"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Traditional Waterfall"], ["like", 0], ["imageUrl", "https://www.jotform.com/blog/wp-content/uploads/2010/03/photo-1524664399170-77e7118fdb6d.jpeg"], ["created_at", "2020-07-27 23:03:15.742756"], ["updated_at", "2020-07-27 23:03:15.742756"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Blooming Courtyard"], ["like", 0], ["imageUrl", "https://emptyeasel.com/wp-content/uploads/2019/02/harry-perry-painting.jpg"], ["created_at", "2020-07-27 23:03:15.757210"], ["updated_at", "2020-07-27 23:03:15.757210"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Burning Forest"], ["like", 0], ["imageUrl", "https://previews.123rf.com/images/number168/number1681611/number168161100048/69741927-oil-painting-landscape-colorful-autumn-trees-semi-abstract-paintings-image-of-forest-aspen-tree-with.jpg"], ["created_at", "2020-07-27 23:03:15.772828"], ["updated_at", "2020-07-27 23:03:15.772828"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pink Sky"], ["like", 0], ["imageUrl", "https://cdn.cnn.com/cnnnext/dam/assets/190904125001-bob-ross-sunsetaglow-2612.jpg"], ["created_at", "2020-07-27 23:03:15.778049"], ["updated_at", "2020-07-27 23:03:15.778049"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Snow Cabin"], ["like", 0], ["imageUrl", "https://images-na.ssl-images-amazon.com/images/I/71TDfrzIvzL._AC_SX522_.jpg"], ["created_at", "2020-07-27 23:03:15.783327"], ["updated_at", "2020-07-27 23:03:15.783327"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sunset by the Beach"], ["like", 0], ["imageUrl", "https://cordovanartschool.com/wp-content/uploads/2020/02/march-16.png"], ["created_at", "2020-07-27 23:03:15.787664"], ["updated_at", "2020-07-27 23:03:15.787664"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.7ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Canyon"], ["like", 0], ["imageUrl", "https://manofmany.com/wp-content/uploads/2019/08/Where-Are-All-the-Bob-Ross-Paintings-1.jpg"], ["created_at", "2020-07-27 23:03:15.792517"], ["updated_at", "2020-07-27 23:03:15.792517"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Wonder Bread"], ["like", 0], ["imageUrl", "https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/wonder-women-kelly-gilleran.jpg"], ["created_at", "2020-07-27 23:03:15.799030"], ["updated_at", "2020-07-27 23:03:15.799030"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Casette"], ["like", 0], ["imageUrl", "https://images.saatchiart.com/saatchi/1121797/art/5148229/4218049-BYKZAJQN-7.jpg"], ["created_at", "2020-07-27 23:03:15.803379"], ["updated_at", "2020-07-27 23:03:15.803379"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Camera"], ["like", 0], ["imageUrl", "https://images.fineartamerica.com/images-medium-large/cameras-retro-viki-vehnovsky.jpg"], ["created_at", "2020-07-27 23:03:15.807223"], ["updated_at", "2020-07-27 23:03:15.807223"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (1.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Bumble Bee"], ["like", 0], ["imageUrl", "https://images.saatchiart.com/saatchi/1303329/art/6411313/5481069-LCMURXRA-7.jpg"], ["created_at", "2020-07-27 23:03:15.811400"], ["updated_at", "2020-07-27 23:03:15.811400"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Angela"], ["like", 0], ["imageUrl", "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/angela-jamie-alexander.jpg"], ["created_at", "2020-07-27 23:03:15.817956"], ["updated_at", "2020-07-27 23:03:15.817956"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Black and White"], ["like", 0], ["imageUrl", "https://previews.123rf.com/images/shooarts/shooarts1204/shooarts120400021/13072013-black-and-white-abstract-brush-painting.jpg"], ["created_at", "2020-07-27 23:03:15.822021"], ["updated_at", "2020-07-27 23:03:15.822021"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Woody"], ["like", 0], ["imageUrl", "https://i.pinimg.com/originals/0a/3e/77/0a3e7722099f6d5dfcfcb30752eb2a6b.jpg"], ["created_at", "2020-07-27 23:03:15.826568"], ["updated_at", "2020-07-27 23:03:15.826568"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "like", "imageUrl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chicken"], ["like", 0], ["imageUrl", "https://brucemillerartist.com/media/content/White%20Chicken%20ll.png"], ["created_at", "2020-07-27 23:03:15.831252"], ["updated_at", "2020-07-27 23:03:15.831252"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 19:03:25 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 41ms (Views: 20.9ms | ActiveRecord: 15.9ms | Allocations: 9403)
+
+
