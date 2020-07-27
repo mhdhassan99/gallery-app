@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     const renderPictures = (picture) => {
         const pictureCard = document.createElement('div')
-        // pictureCard.className = 'picture-card'
+        pictureCard.className = 'picture-card'
         const pictureTitle = document.createElement('h4')
         const pictureImage = document.createElement('img')
+        pictureImage.className = 'picture-image'
         const pictureLike = document.createElement('p')
 
         pictureTitle.innerHTML = picture.title
