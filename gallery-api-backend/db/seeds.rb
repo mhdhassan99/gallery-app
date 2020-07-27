@@ -22,117 +22,115 @@ pictures = [
     },
 
     {
-        title: '', 
+        title: 'walk in the park', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/I/716tsQsStCL.jpg",
     },
 
     {
-        title: '', 
+        title: 'Starry Night', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://www.vangoghgallery.com/img/starry_night_full.jpg",
     },
 
     {
-        title: '', 
+        title: 'Sponge Out of Water', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://mymodernmet.com/wp/wp-content/uploads/2019/12/dave-pollot-thrift-store-paintings-1.jpg",
     },
 
     {
-        title: '', 
+        title: 'Traditional Waterfall', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://www.jotform.com/blog/wp-content/uploads/2010/03/photo-1524664399170-77e7118fdb6d.jpeg",
     },
 
     {
-        title: '', 
+        title: 'Blooming Courtyard', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://emptyeasel.com/wp-content/uploads/2019/02/harry-perry-painting.jpg",
     },
 
     {
-        title: '', 
+        title: 'Burning Forest', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://previews.123rf.com/images/number168/number1681611/number168161100048/69741927-oil-painting-landscape-colorful-autumn-trees-semi-abstract-paintings-image-of-forest-aspen-tree-with.jpg",
     },
 
     {
-        title: '', 
+        title: 'Pink Sky', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://cdn.cnn.com/cnnnext/dam/assets/190904125001-bob-ross-sunsetaglow-2612.jpg",
     },
 
     {
-        title: '', 
+        title: 'Snow Cabin', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/I/71TDfrzIvzL._AC_SX522_.jpg",
     },
 
     {
-        title: '', 
+        title: 'Sunset by the Beach', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://cordovanartschool.com/wp-content/uploads/2020/02/march-16.png",
     },
 
     {
-        title: '', 
+        title: 'Canyon', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://manofmany.com/wp-content/uploads/2019/08/Where-Are-All-the-Bob-Ross-Paintings-1.jpg",
     },
 
     {
-        title: '', 
+        title: 'Wonder Bread', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/wonder-women-kelly-gilleran.jpg",
     },
 
     {
-        title: '', 
+        title: 'Casette', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images.saatchiart.com/saatchi/1121797/art/5148229/4218049-BYKZAJQN-7.jpg",
     },
 
     {
-        title: '', 
+        title: 'Camera', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images.fineartamerica.com/images-medium-large/cameras-retro-viki-vehnovsky.jpg",
     },
 
     {
-        title: '', 
+        title: 'Bumble Bee', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images.saatchiart.com/saatchi/1303329/art/6411313/5481069-LCMURXRA-7.jpg",
     },
 
     {
-        title: '', 
+        title: 'Angela', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/angela-jamie-alexander.jpg",
     },
 
     {
-        title: '', 
+        title: 'Black and White', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://previews.123rf.com/images/shooarts/shooarts1204/shooarts120400021/13072013-black-and-white-abstract-brush-painting.jpg",
     },
 
     {
-        title: '', 
+        title: 'Woody', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://i.pinimg.com/originals/0a/3e/77/0a3e7722099f6d5dfcfcb30752eb2a6b.jpg",
     },
 
     {
-        title: '', 
+        title: 'Chicken', 
         like: 0,
-        imageUrl: "",
+        imageUrl: "https://brucemillerartist.com/media/content/White%20Chicken%20ll.png",
     }
  ]
 
- 5.times do
-    User.create(name: Faker::User.name, location: Faker::User.location, age: Faker::User.age)
-  end
+
 
 pictures.each do |picture|
     Picture.create!(picture)
