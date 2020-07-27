@@ -1,0 +1,17 @@
+.hole-page {
+    height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(148, 110, 110);
+    color: #222;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+.welcome-bar {
+    border: 200px;
+    margin: 20px;
+    display: flex;
+}
