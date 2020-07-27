@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+    Picture.destroy_all
+    puts 'pictures destroyed'
+
+pictures = [
+    {
+        title: "mountain", 
+        like: 0,
+        imageUrl: "https://cosmosmagazine.com/wp-content/uploads/2020/02/190218-mount-full-1440x810.jpg"
+    },
+
+    {
+        title: "oceans", 
+        like: 0,
+        imageUrl: "https://scx2.b-cdn.net/gfx/news/2019/bluefinancea.jpg"
+    },
+
+ ]
+
+
+  pictures.each do |picture|
+    Picture.create!(picture)
+  end
