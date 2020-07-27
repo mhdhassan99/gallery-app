@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', (e) => {
     const picturesUrl = 'http://localhost:3000/api/v1/pictures';
 
@@ -6,6 +7,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         .then(response => response.json())
         .then(pictures => console.log(pictures))
     }
-    
+
+
     getAllPictures()
 })

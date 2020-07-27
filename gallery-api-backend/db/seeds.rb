@@ -20,7 +20,6 @@ pictures = [
         like: 0,
         imageUrl: "https://scx2.b-cdn.net/gfx/news/2019/bluefinancea.jpg"
     },
-
  ]
 
 

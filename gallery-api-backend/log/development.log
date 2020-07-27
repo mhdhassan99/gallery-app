@@ -295,3 +295,25 @@ Processing by Api::V1::PicturesController#index as HTML
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1071)
 
 
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 15:49:34 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 4.3ms | Allocations: 7133)
+
+
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 15:53:56 -0400
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (1.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.7ms | Allocations: 1092)
+
+
+Started GET "/api/v1/pictures" for ::1 at 2020-07-27 15:54:23 -0400
+Processing by Api::V1::PicturesController#index as */*
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1091)
+
+
