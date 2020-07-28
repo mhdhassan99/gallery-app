@@ -4,8 +4,10 @@ one:
   title: MyString
   like: 1
   imageUrl: MyString
+  favorites: false
 
 two:
   title: MyString
   like: 1
   imageUrl: MyString
+  favorites: false

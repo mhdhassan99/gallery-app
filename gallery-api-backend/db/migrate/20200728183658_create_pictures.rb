@@ -4,6 +4,7 @@ class CreatePictures < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :like
       t.string :imageUrl
+      t.boolean :favorite
 
       t.timestamps
     end

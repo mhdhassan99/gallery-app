@@ -68,15 +68,15 @@ picture belongs_to favorites
 ## User Stories + (features)
 ### as a user
 1: i should see a home page with all the pictures
-2: I should be able to login (login button)
+
 3: after login I should be able to like pictures,(like button)
 4: comment on pictures. (comment form???)
 5: edit comments and delete comments (edit form? Delete button)
-6: give picture a rating. (5 star System?)
 7: I should be able to put pictures in favorites. (favorite button)
 
 
 ## advanced stories
+2: I should be able to login (login button)
 1: sort by like
 2: sort my favorites.
 3: filter favorites
@@ -84,12 +84,11 @@ picture belongs_to favorites
 
 
 ## models
-### user
-- name
-- number
-- city
+comment 
+- picture_id
 
 ### favorite
+
 
 ### picture
 - title
@@ -98,13 +97,11 @@ picture belongs_to favorites
 
 
 ### relationships
-user has_many favorite
-favorite belongs_to user
-user has_many pictures through favorite
-
 favorite belongs_to pictures
 picture has_many favorite
-picture 
+
+pictures has_many comments 
+comments belongs to pictures
 
 ### controller actions
 - new comment

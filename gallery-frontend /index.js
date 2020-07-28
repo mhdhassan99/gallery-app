@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (e) => {
-    const picturesUrl = 'http://localhost:3000/api/v1/pictures';
+    const picturesUrl = 'http://localhost:3000/api/v1/pictures/';
     const pictureCollection = document.getElementById('picture-collection')
     let pictureRow = document.querySelector('.row') 
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const pictureTitle = document.createElement('h4')
         const pictureImage = document.createElement('img')
         pictureImage.className = 'picture-image'
-        const pictureLike = document.createElement('p')
+        const pictureLike = document.createElement('span')
         const likeButton = document.createElement('button')
         likeButton.className = 'like'
         likeButton.innerText = 'like'
@@ -29,14 +29,32 @@ document.addEventListener('DOMContentLoaded', (e) => {
        
         pictureTitle.innerHTML = picture.title
         pictureImage.src = picture.imageUrl
-        pictureLike.innerHTML = picture.like 
-        pictureLike.append(likeButton, favoriteButton)
-        pictureCard.append(pictureTitle, pictureImage, pictureLike)
+        pictureLike.innerText = `${picture.like} Likes`
+       
+        pictureCard.append(pictureTitle, pictureImage, pictureLike, likeButton, favoriteButton)
 
         pictureRow.append(pictureCard)
+
+        likeButtonHandler(picture, likeButton)
     }
-
-
-
+    const likeButtonHandler = (picture, likeButton) => {
+        likeButton.addEventListener('click', (e) => {
+            const likeCount = likeButton.previousElementSibling
+            const newLike = picture.like += 1 
+            likeCount.innerText = `${newLike} Likes`
+            addLike(newLike, picture)
+        })
+    }
+    const addLike = (newLike, picture) => {
+        fetch(picturesUrl + picture.id, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ like: newLike })
+        })
+    }
+    
     getAllPictures()
 })
