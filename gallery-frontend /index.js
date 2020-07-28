@@ -20,10 +20,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const pictureImage = document.createElement('img')
         pictureImage.className = 'picture-image'
         const pictureLike = document.createElement('p')
+        const likeButton = document.createElement('button')
+        likeButton.innerText = 'like'
        
         pictureTitle.innerHTML = picture.title
         pictureImage.src = picture.imageUrl
-        pictureLike.innerHTML = picture.like
+        pictureLike.innerHTML = picture.like 
+        pictureLike.append(likeButton)
         pictureCard.append(pictureTitle, pictureImage, pictureLike)
 
         pictureRow.append(pictureCard)
