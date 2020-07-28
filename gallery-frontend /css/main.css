@@ -15,10 +15,13 @@
 
 .picture-card {
     width: 33.33333%;
-    height: 50%;
+    height: 100%;
     display: table-cell;
-    padding: 10px;
+    padding-right: 10px;
     vertical-align: middle;
+    padding-left: 20px;
+   
+    
 } 
 
 .row {
@@ -26,13 +29,39 @@
 }
 
 .picture-image {
-    height: 100%;
     width: 100%;
-    flex: 33.33%;
+    height: 325px;
+    object-fit: fill;
+    position: relative;
+    border-top-right-radius: 7%;
+    border-top-left-radius: 7%;
+
 }
 
 .welcome-bar {
     border: 200px;
     margin: 20px;
     display: flex;
+}
+
+p {
+    background-color: rgba(73, 60, 151, 0.7);
+    font-size: larger ;
+    color: white ;
+    text-indent: 0.8cm;
+    border-bottom-right-radius: 4%;
+    border-bottom-left-radius: 4%;
+
+}
+
+.favorite {
+     float: right;
+     padding-left: 12px;
+     padding-right: 12px;
+     margin-right: 20px;
+     border-radius: 20%;
+}
+
+.like {
+    margin-left: 15px;
 }
