@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     const picturesUrl = 'http://localhost:3000/api/v1/pictures';
     const pictureCollection = document.getElementById('picture-collection')
+    let pictureRow = document.querySelector('.row') 
 
     const getAllPictures = () => {
         fetch(picturesUrl)
@@ -14,16 +15,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const renderPictures = (picture) => {
         const pictureCard = document.createElement('div')
         pictureCard.className = 'picture-card'
+        
         const pictureTitle = document.createElement('h4')
         const pictureImage = document.createElement('img')
         pictureImage.className = 'picture-image'
         const pictureLike = document.createElement('p')
-
+       
         pictureTitle.innerHTML = picture.title
         pictureImage.src = picture.imageUrl
         pictureLike.innerHTML = picture.like
         pictureCard.append(pictureTitle, pictureImage, pictureLike)
-        pictureCollection.append(pictureCard)
+
+        pictureRow.append(pictureCard)
     }
 
 

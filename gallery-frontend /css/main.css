@@ -14,12 +14,19 @@
 }
 
 .picture-card {
-    width: 50%;
+    width: 33.33333%;
     height: 50%;
+    display: table-cell;
+    padding: 10px;
+    vertical-align: middle;
 } 
 
+.row {
+    margin: 10px;
+}
+
 .picture-image {
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 
