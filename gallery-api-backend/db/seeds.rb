@@ -11,21 +11,21 @@
 
 pictures = [
     {
-        title: 'mountain', 
+        title: 'Mountain', 
         like: 0,
         imageUrl: "https://cosmosmagazine.com/wp-content/uploads/2020/02/190218-mount-full-1440x810.jpg",
         favorite: true
     },
 
     {
-        title: 'oceans', 
+        title: 'Oceans', 
         like: 0,
         imageUrl: "https://scx2.b-cdn.net/gfx/news/2019/bluefinancea.jpg",
         favorite: false
     },
 
     {
-        title: 'walk in the park', 
+        title: 'Walk in the park', 
         like: 0,
         imageUrl: "https://images-na.ssl-images-amazon.com/images/I/716tsQsStCL.jpg",
         favorite: true
@@ -69,7 +69,7 @@ pictures = [
     {
         title: 'Pink Sky', 
         like: 0,
-        imageUrl: "https://cdn.cnn.com/cnnnext/dam/assets/190904125001-bob-ross-sunsetaglow-2612.jpg",
+        imageUrl: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/pink-sky-nancy-merkle.jpg",
         favorite: false
     },
 

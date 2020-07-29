@@ -11,27 +11,32 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #3A3042;
 }
 
 #picture-collection {
     flex-wrap: wrap;
+    background-color: #3A3042;
+    justify-content: center;
+    align-content: center;
 }
 
 .picture-card {
-    width: 33.33333%;
+    width: 31%;
     height: 100%;
     display: table-cell;
     padding-right: 10px;
     vertical-align: middle;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    margin-top: 25px;
+    padding: 20px;
+    margin: 15px;
     border-radius: 10px;
-    background: linear-gradient(to right, white, #ffe9ff);
+    background: linear-gradient(to right, #433d48, #3A3042);
+    border: 3px solid #3A3042;
 }
 
 .row {
-    margin: 10px;
+    margin: 10px #3A3042;
+    padding-left: 30px ;
 }
 
 .picture-image {
@@ -41,18 +46,21 @@ body {
     position: relative;
     transition: 0.4s ease-in all;
     border-radius: 10px;
-    box-shadow: -12px 2px 10px 1px #d8a0a0;
+    box-shadow: -8px 2px 10px 1px #210B2C;
 }
 
 .picture-image:hover {
     transform: scale(1.1);
+    box-shadow: none;
 }
 
 .picture-title {
     font-size: 1.5rem;
     margin: 10px 10px 10px 5px;
+    margin-left: 30px;
+    margin-bottom: 30px;
     padding: 0px;
-    background: -webkit-linear-gradient(#51dab5, #a7a007);
+    background: -webkit-linear-gradient(#ffffff, #8E8DBE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -71,20 +79,24 @@ p {
     text-indent: 0.8cm;
     border-bottom-right-radius: 4%;
     border-bottom-left-radius: 4%;
+}
 
+span {
+    color: #FFFFFB;
 }
 
 .favorite {
+    margin-top: 15px;
     float: right;
-    border: 0.5px solid white;
-    color: white;
-    background: red;
+    border: 0.5px solid #8E8DBE;
+    color: #3A3042;
+    background: #F5A300;
     border-radius: 5px;
-    margin: 5px 0px 5px 5px;
 }
 
 .favorite:disabled {
     background: grey;
+    color: white;
 }
 
 .favorite[disabled]:hover {
@@ -97,15 +109,48 @@ p {
 }
 
 .favorite:hover {
+    color: #3A3042;
+    background: #FFCF70;
+    transition: .3s
+}
+
+.remove-favorite {
+    margin-top: 15px;
+    float: right;
+    border: 0.5px solid white;
+    color: white;
+    background: #FF6978;
+    border-radius: 5px;
+}
+
+.remove-favorite:disabled {
+    background: grey;
+}
+
+.remove-favorite[disabled]:hover {
+    background: grey;
+    color: white;
+}
+
+.remove-favorite:focus {
+    outline: none;
+}
+
+.remove-favorite:hover {
     color: red;
     background: white;
+    transition: .3s
 }
 
 .like {
-    border: 0.5px solid white;
-    color: white;
-    background: green;
+    margin-top: 15px;
+    border: 0.5px solid #8E8DBE;
+    color: #3A3042;
+    font-size: 20px;
+    background: white;
     border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 5px;
 }
 
@@ -116,26 +161,30 @@ p {
 .like:hover {
     color: red;
     background: white;
+    transition: .3s
 }
 
 .commentCard {
-    border: 0.5px solid pink;
+    border: 0.5px solid #8E8DBE;
     padding: 10px;
+    color: rgb(145, 119, 119);
     border-radius: 5px;
     margin-top: 15px;
-    background: rgb(255 237 237);
+    background: #210B2C;
 }
 
 .commentItem {
-    border: 1px solid #fbd8de;
+    border: 1px solid #8E8DBE;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
+    background: #3A3042;
 }
 
 .commentUser {
     font-weight: 600;
+    color: #FFFFFB;
 }
 
 .commentContainer {
@@ -145,11 +194,12 @@ p {
 
 .commentHeader {
     font-weight: bold;
+    color: #FFFFFB;
 }
 
 .commentTextField {
     width: -webkit-fill-available;
-    border: 1px solid pink;
+    border: 1px solid #8E8DBE;
     border-radius: 4px;
     padding: 5px;
 }
@@ -158,13 +208,16 @@ p {
     border: 0.5px solid white;
     border-radius: 5px;
     font-size: 15px;
-    background: red;
+    background: #FF6978;
     color: aliceblue;
+    align-self: flex;
+    justify-self: right;
 }
 
 .deleteCommentButton:hover {
     background: aliceblue;
     color: red;
+    transition: .3s
 }
 
 .deleteCommentButton:focus {
@@ -172,9 +225,10 @@ p {
 }
 
 .showComments {
-    background: red;
+    margin-top: 15px;
+    background:#210B2C;
     color: aliceblue;
-    border: 0.5px solid white;
+    border: 0.5px solid #8E8DBE;
     border-radius: 5px;
 }
 
@@ -184,5 +238,6 @@ p {
 
 .showComments:hover {
     background: aliceblue;
-    color: red;
+    color: #210B2C;
+    transition: .3s
 }

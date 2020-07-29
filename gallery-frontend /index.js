@@ -60,15 +60,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
         
         const likeButton = document.createElement('button')
         likeButton.className = 'like'
-        likeButton.innerText = 'like'
+        likeButton.innerHTML = `&#x2665;`
 
         const favoriteButton = document.createElement('button')
         favoriteButton.className = 'favorite'
         if (isFavoritesTab) {
             favoriteButton.innerText = 'Remove Favorite'
+            favoriteButton.className = 'remove-favorite'
         } else {
             favoriteButton.disabled = picture.favorite;
             favoriteButton.innerText = 'Add Favorite'
+            favoriteButton.className = 'favorite'
         }
 
         const showCommentsButton = document.createElement('button');
