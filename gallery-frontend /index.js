@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     const loadPictures = (pictures) => {
         pictures.forEach(picture => renderPictures(picture))
-        console.log(pictures)
         handleSwitchingTabs(pictures)
     }
 
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const pictureCard = document.createElement('div')
         pictureCard.className = 'picture-card'
         const pictureTitle = document.createElement('h4')
+        pictureTitle.className = 'picture-title'
         const pictureImage = document.createElement('img')
         pictureImage.className = 'picture-image'
         const pictureLike = document.createElement('span')
@@ -129,7 +129,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     const displayComments = (comments, pictureCard, commentCard) => {
 
-        
         comments.forEach(comment => {
             addCommentToCommentCard(comment, commentCard);
         });
