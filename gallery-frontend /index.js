@@ -3,12 +3,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const picturesUrl = 'http://localhost:3000/api/v1/pictures/';
     const commentsUrl = 'http://localhost:3000/api/v1/comments/';
     const pictureCollection = document.getElementById('picture-collection')
-    let pictureRow = document.querySelector('.row') 
+    const addPicture = document.querySelector('#add-form')
+    const row = document.querySelector('.row');
+    
 
     const handleSwitchingTabs = (pictures) => {
+        //homeTab is somethign with the id of home - home in the navbar
         let homeTab = document.querySelector('#home');
         let favoritesTab = document.querySelector('#favorites');
-        
+    // Switches to home tab
         homeTab.addEventListener('click', (e) => {
             let isHomeActive = homeTab.classList.contains('active');    
             if (!isHomeActive) {
@@ -22,7 +25,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             }
         })
-
+    //Switches to favorites tab and disables home tab 
         favoritesTab.addEventListener('click', (e) => {
             let isFavoritesActive = favoritesTab.classList.contains('active');
             if (!isFavoritesActive) {
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             }
         })
     }
-
+//Get all Pictues 
     const getAllPictures = () => {
         fetch(picturesUrl)
         .then(response => response.json())
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         pictures.forEach(picture => renderPictures(picture))
         handleSwitchingTabs(pictures)
     }
-
+//Render Picrutes onto Show Page
     const renderPictures = (picture, isFavoritesTab = false) => {
         const pictureCard = document.createElement('div')
         pictureCard.className = 'picture-card'
@@ -57,11 +60,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const pictureImage = document.createElement('img')
         pictureImage.className = 'picture-image'
         const pictureLike = document.createElement('span')
-        
+    //Create a like Button    
         const likeButton = document.createElement('button')
         likeButton.className = 'like'
         likeButton.innerHTML = `&#x2665;`
-
+    //create a favorite button with a different behavior if we are in the favorites tab 
         const favoriteButton = document.createElement('button')
         favoriteButton.className = 'favorite'
         if (isFavoritesTab) {
@@ -83,7 +86,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
        
         pictureCard.append(pictureTitle, pictureImage, pictureLike, likeButton, favoriteButton, showCommentsButton)
 
-        pictureRow.append(pictureCard)
+        row.append(pictureCard)
 
         likeButtonHandler(picture, likeButton)
         favoriteButtonHandler(picture, favoriteButton, isFavoritesTab)
@@ -236,7 +239,58 @@ document.addEventListener('DOMContentLoaded', (e) => {
             body: JSON.stringify({ picture: { favorite: isFavorited } })
         })
     }
+
+    //create a form div... 
+    const createPicture = () => {
+        const pictureForm = document.createElement('form')
+        // addPicture.innerHTML = ""
+        pictureForm.innerHTML = `
+          <label>Image title: </label>
+          <input type="text" name="title">
+          <br>
+          <label>Image link: </label>
+          <input type="text" name="imageUrl">
+          <br>
+          <input type="submit" value="Add Picture">
+        `
+        addPicture.append(pictureForm)
+    }
+
+    const submitHandler = () => {
+        document.addEventListener("submit", e => {
+          e.preventDefault()
+          const pictureForm = document.createElement('form')
+          pictureForm = e.target
     
+          const title = pictureForm.title.value
+          const like = 0
+          const imageUrl = pictureForm.imageUrl.value
+          const favorite = false
+    
+          const pictureObj = { title, like, imageUrl, favorite }
+    
+          pictureForm.reset()
+    
+          fetch(picturesUrl , {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              "accept": "application/json"
+            },
+            body: JSON.stringify(pictureObj)
+          })
+          .then(response => response.json())
+          .then(newPictureObj => {
+            renderPictures(newPictureObj)
+          })
+        })
+      }
+        
+        
+    
+    
+    submitHandler()
+    createPicture();
     getAllPictures()
     // handleSwitchingTabs()
 })
